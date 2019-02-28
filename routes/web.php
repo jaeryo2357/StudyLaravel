@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/hello',function(){
 	return '<h1>Hello Foo</h1>';
 });
+
+Route::get('/binding',function(){
+	return view('binding')->with(['name'=>'Foo','greeting'=>'안녕하세요',]);
+});
