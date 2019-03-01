@@ -20,5 +20,6 @@ Route::get('/hello',function(){
 });
 
 Route::get('/binding',function(){
-	return view('binding')->with(['name'=>'Foo','greeting'=>'안녕하세요',]);
+	$items=['apple','banana','tomato'];
+	return view('binding',['items'=>$items]);
 });
