@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','WelcomeController@index');
 
 Route::get('/hello',function(){
 	return '<h1>Hello Foo</h1>';
@@ -23,3 +21,5 @@ Route::get('/binding',function(){
 	$items=['apple','banana','tomato'];
 	return view('binding',['items'=>$items]);
 });
+
+Route::resource('article','ArticlesController');
